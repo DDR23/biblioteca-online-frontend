@@ -11,4 +11,19 @@
   );
   width: 100vw;
   height: 90vh;
+
+  &__img{
+    img{
+      width: 23rem;
+    }
+  }
+  
+  &__content{
+    margin-top: 2rem;
+
+    h1{
+      margin: 1rem;
+      font-family: 'Montserrat', sans-serif;
+    }
+  }
 }
