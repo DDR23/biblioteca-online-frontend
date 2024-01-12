@@ -1,0 +1,14 @@
+@use '../../../styles/mixins/mixins' as *;
+
+.allbooks{
+  @include flex-position(
+    flex,
+    column,
+    auto,
+    center,
+    center,
+    center
+  );
+  width: 100vw;
+  height: 90vh;
+}

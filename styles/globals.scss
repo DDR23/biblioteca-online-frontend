@@ -1,0 +1,31 @@
+@use './variables/variables' as *;
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Space Mono', monospace;
+}
+
+html, body{
+  max-width: 100vw;
+  overflow-x: hidden;
+  background-color: $cor-bg-preto;
+  color: $cor-bg-branco;
+}
+
+a{
+  color: inherit;
+  text-decoration: none;
+  list-style: none;
+}
+
+li{
+  list-style: none;
+}
+
+::-webkit-scrollbar{
+  display: none;
+}
