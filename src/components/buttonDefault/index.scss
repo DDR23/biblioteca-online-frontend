@@ -1,0 +1,16 @@
+@use '../../../styles/mixins/mixins' as *;
+@use '../../../styles/variables/variables' as *;
+
+.buttondefault{
+  @include buttondefault;
+  margin-top: 1rem;
+  
+  &:hover {
+    @include buttondefaulthover;
+  }
+}
+
+.buttondisabled{
+  margin-top: 1rem;
+  @include buttondisabled;
+}

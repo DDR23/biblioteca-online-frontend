@@ -1,0 +1,16 @@
+@use '../../../styles/variables/variables' as *;
+@use '../../../styles/mixins/mixins' as *;
+
+.buttoncreate{
+  @include flex-position(
+    flex,
+    column,
+    auto,
+    center,
+    center,
+    center
+  );
+  padding: 1rem;
+  border-radius: 50%;
+  background-color: $cor-azul;
+}

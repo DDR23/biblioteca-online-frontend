@@ -1,3 +1,5 @@
+@use '../variables/variables' as *;
+
 //FLEX
 
 @mixin flex-position(
@@ -14,6 +16,33 @@
   justify-content: $justify-content;
   text-align: $text-align;
   align-items: $align-items;
+}
+
+
+//BUTTONDEFAULT
+
+@mixin buttondefault{
+  padding: .3rem 1rem;
+  color: $cor-preto;
+  transition-duration: .2s;
+  border: none;
+  cursor: pointer;
+}
+
+@mixin buttondefaulthover{
+  background-color: $cor-azul;
+  color: $cor-branco;
+  transition-duration: .2s;
+  transform: translateY(-.1rem);
+}
+
+
+//BUTTONDEFAULT
+
+@mixin buttondisabled{
+  padding: .3rem 1rem;
+  border: none;
+  cursor: default; 
 }
 
 

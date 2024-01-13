@@ -9,7 +9,8 @@ export default function Home() {
         </div>
         <div className="home__content">
           <h1>Biblioteca DNC</h1>
-          <p>Um acervo de E-Books gratuitos, baixe e aproveite</p>
+          <p>Um acervo de E-Books gratuitos</p>
+          <p>baixe e aproveite</p>
         </div>
       </div>
     </>
