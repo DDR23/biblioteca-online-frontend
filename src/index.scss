@@ -1,5 +1,7 @@
+@use '../styles/variables/variables' as *;
+
 .app{
   width: 100vw;
   height: 100vh;
-  background-color: rgb(40, 121, 192);
+  background-color: $cor-cinza;
 }

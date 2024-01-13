@@ -1,4 +1,5 @@
 @use '../../../styles/mixins/mixins' as *;
+@use '../../../styles/variables/variables' as *;
 
 .allbooks{
   @include flex-position(
@@ -10,5 +11,52 @@
     center
   );
   width: 100vw;
-  height: 90vh;
+  min-height: 100vh;
+  padding: 6rem 0 7.5rem;
+  height: max-content;
+
+  &__content{
+    width: 90vw;
+    gap: .3rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  &__geting{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    padding: 4rem 0 1rem;
+    background-color: $cor-cinza;
+
+    svg{
+      margin-top: 1.5rem;
+      color: $cor-azul;
+      transition-duration: .5s;
+
+      &:hover{
+        transform: rotate(360deg);
+        transition-duration: .5s;
+      }
+    }
+  }
+}
+
+.buttoncreatebook{
+  position: fixed;
+  margin: 2rem;
+  bottom: 0;
+  right: 0;
+}
+
+@include viewport(xs){
+  .allbooks__geting{
+    p{
+      font-size: 12px;
+    }
+  }
 }

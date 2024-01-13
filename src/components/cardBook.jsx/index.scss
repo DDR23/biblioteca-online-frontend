@@ -1,0 +1,51 @@
+@use '../../../styles/mixins/mixins' as *;
+@use '../../../styles/variables/variables' as *;
+
+.cardbook{
+  @include flex-position(
+    flex,
+    column,
+    .5rem,
+    center,
+    start,
+    flex-start
+  );
+  width: 20rem;
+  max-width: 90vw;
+  padding: .8rem 1rem;
+  height: auto;
+  background-color: $cor-preto;
+  border-radius: 10px;
+  border: 1px solid $cor-preto;
+  transition-duration: .2s;
+  cursor: pointer;
+
+  &:hover{
+    transform: translateY(-.1rem);
+    transition-duration: .2s;
+    box-shadow: 0 1px 1px 0 $cor-azul;
+  }
+
+  h2{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+  }
+
+  p{
+    font-size: 12px;
+  }
+
+  &__show{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+  }
+}
+
+@include viewport(xs){
+  .cardbook{
+    h2{
+      font-size: 16px;
+    }
+  }
+}
