@@ -1,12 +1,12 @@
 @use '../../../styles/mixins/mixins' as *;
 @use '../../../styles/variables/variables' as *;
 
-.cardbook{
+.cardbookpreview{
   @include flex-position(
     flex,
     column,
     .5rem,
-    center,
+    space-between,
     start,
     flex-start
   );
@@ -26,26 +26,107 @@
     box-shadow: 0 1px 1px 0 $cor-azul;
   }
 
-  h2{
-    font-family: 'Montserrat', sans-serif;
-    font-size: $font-h2-default;
+  &__details{
+    h2{
+      word-break: break-all;
+      font-family: 'Montserrat', sans-serif;
+      font-size: $font-h2-default;
+    }
+  
+    span{
+      font-size: $font-span;
+    }
   }
 
-  span{
-    font-size: $font-span;
-  }
-
-  &__show{
+  &__btnshow{
     width: 100%;
     display: flex;
     justify-content: end;
   }
 }
 
+.cardbook{
+  @include flex-position(
+    flex,
+    column,
+    .5rem,
+    space-between,
+    start,
+    flex-start
+  );
+  width: 40rem;
+  max-width: 90vw;
+  padding: .8rem 1rem;
+  height: auto;
+  background-color: $cor-preto;
+  border-radius: 10px;
+  border: 1px solid $cor-preto;
+
+  &__details{
+    h2{
+      word-break: break-all;
+      font-family: 'Montserrat', sans-serif;
+      font-size: $font-h2-default;
+      margin-bottom: 1rem;
+    }
+
+    p{
+      font-size: $font-p-default;
+      text-transform: capitalize;
+    }
+    
+    span{
+      color: $cor-cinza-medio;
+      font-size: $font-span;
+    }
+
+    &--sumary{
+      background-color: $cor-cinza-shadow;
+      padding: .5rem;
+      margin: .2rem 0 0 0;
+      border-radius: 3px;
+      
+      p{
+        font-family: 'Montserrat', sans-serif;
+        text-transform: initial;
+      }
+    }
+  }
+  
+  &__btnshow{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    margin-top: 1rem;
+    gap: 1rem;
+
+    svg{
+      cursor: pointer;
+      transition-duration: .2s;
+    }
+
+    svg:hover{
+      color: $cor-azul;
+      transform: translateY(-.1rem);
+      transition-duration: .2s;
+    }
+  }
+}
+
 @include viewport(xs){
+  .cardbookpreview{
+    h2{
+      font-size: $font-h2-xs;
+    }
+  }
+
   .cardbook{
     h2{
       font-size: $font-h2-xs;
+    }
+
+    p{
+      font-size: $font-p-xs;
     }
   }
 }

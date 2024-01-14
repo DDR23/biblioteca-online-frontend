@@ -1,4 +1,5 @@
 @use '../../../styles/mixins/mixins' as *;
+@use '../../../styles/variables/variables' as *;
 
 .onebook{
   @include flex-position(
@@ -10,5 +11,37 @@
     center
   );
   width: 100vw;
-  height: 90vh;
+  min-height: 100vh;
+  padding: 4rem 0 1rem;
+  height: max-content;
+
+  &__geting{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    padding: 4rem 0 1rem;
+    background-color: $cor-cinza;
+
+    svg{
+      margin-top: 1.5rem;
+      color: $cor-azul;
+      transition-duration: .5s;
+
+      &:hover{
+        transform: rotate(360deg);
+        transition-duration: .5s;
+      }
+    }
+  }
+}
+
+@include viewport(xs){
+  .onebook__geting{
+    p{
+      font-size: $font-p-xs;
+    }
+  }
 }

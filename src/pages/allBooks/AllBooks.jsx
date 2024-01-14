@@ -35,7 +35,7 @@ export default function AllBooks() {
       <div className="allbooks">
         <div className="allbooks__content">
           {books.map((book, index) => (
-            <CardBook key={index} title={book.title} publisher={book.publisher} />
+            <CardBook key={index} link={`/book/${book._id}`} book={book} />
           ))}
         </div>
       </div>

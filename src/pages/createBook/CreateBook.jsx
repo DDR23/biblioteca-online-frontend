@@ -81,7 +81,7 @@ export default function CreateBook() {
     <>
       <div className="createbook">
         <div className='createbook__content'>
-          <h1>Cadastro de Livros</h1>
+          <h2>Cadastro de Livros</h2>
           <form onSubmit={handleSubmit(createOneBook)}>
             <label>Id</label>
             <input {...register('id')} type="text"></input>
@@ -98,6 +98,8 @@ export default function CreateBook() {
             <label>Editora</label>
             <input {...register('publisher')} type="text"></input>
             {errors.publisher && (<span>{errors.publisher.message}</span>)}
+            <label>Descrição</label>
+            <input {...register('sumary')} type="text"></input>
             <button type='submit' className='buttondefault'>Cadastrar Livro</button>
           </form>
         </div>
