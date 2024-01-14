@@ -28,11 +28,11 @@
 
     h1{
       font-family: 'Montserrat', sans-serif;
-      font-size: 38px;
+      font-size: $font-h1-default;
     }
 
     p{
-      font-size: 16px;
+      font-size: $font-p-default;
     }
   }
 }
@@ -40,11 +40,11 @@
 @include viewport(xs){
   .home__content{
     h1{
-      font-size: 30px;
+      font-size: $font-h1-xs;
     }
 
     p{
-      font-size: 14px;
+      font-size: $font-p-xs;
     }
   }
 }

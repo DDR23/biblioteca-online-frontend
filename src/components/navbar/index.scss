@@ -25,3 +25,11 @@
     color: $cor-azul;
   }
 }
+
+@include viewport(xs){
+  .navbar{
+    p{
+      font-size: $font-p-xs;
+    }
+  }
+}

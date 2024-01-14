@@ -1,12 +1,12 @@
 import './index.scss'
-import { FiMenu } from "react-icons/fi";
+import { FiMenu } from "react-icons/fi"
 
 export default function CardBook({ title, publisher}) {
   return (
     <>
       <div className="cardbook">
         <h2>{title}</h2>
-        <p>{publisher}</p>
+        <span>{publisher}</span>
         <div className="cardbook__show">
           <FiMenu size={23} />
         </div>

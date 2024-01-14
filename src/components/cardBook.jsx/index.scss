@@ -28,11 +28,11 @@
 
   h2{
     font-family: 'Montserrat', sans-serif;
-    font-size: 20px;
+    font-size: $font-h2-default;
   }
 
-  p{
-    font-size: 12px;
+  span{
+    font-size: $font-span;
   }
 
   &__show{
@@ -45,7 +45,7 @@
 @include viewport(xs){
   .cardbook{
     h2{
-      font-size: 16px;
+      font-size: $font-h2-xs;
     }
   }
 }

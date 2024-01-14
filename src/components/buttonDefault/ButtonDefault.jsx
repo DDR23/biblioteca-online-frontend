@@ -16,4 +16,4 @@ export default function ButtonDefault({ link, target, largura, name }) {
 }
 
 
-// <ButtonDefault link="" target="" largura="" nome="" />
+// <ButtonDefault link="" target="" largura="" name="" />

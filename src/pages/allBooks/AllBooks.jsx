@@ -5,7 +5,7 @@ import CardBook from '../../components/cardBook.jsx/CardBook'
 import ButtonCreate from '../../components/buttonCreate/ButtonCreate'
 
 export default function AllBooks() {
-  const { data, isGeting, error } = useGet("https://desafio05escoladnc.vercel.app/books")
+  const { data, isGeting, error } = useGet(`${import.meta.env.VITE_BASE_URL}/books`)
   const books = data.books
 
   if (error) {
