@@ -16,7 +16,7 @@ export default function CreateBook() {
   const [posted, setPosted] = useState(false)
   const [book, setBook] = useState('')
 
-  const { data, isPosting, error } = usePost(`${import.meta.env.VITE_BASE_URL}/books/create`, book, posted)
+  const { data, isPosting, error, error409 } = usePost(`${import.meta.env.VITE_BASE_URL}/books/create`, book, posted)
 
   const createOneBook = (book) => {
     setPosted(true)
@@ -29,7 +29,19 @@ export default function CreateBook() {
     }
   }, [data, error])
 
-  if (error) {
+  if (error409) {
+    return (
+      <>
+        <div className="createbook__posting">
+          <p>Este ID já existe, tente outro</p>
+          <div>
+            <a href="/book/create"><IoMdRefresh size={30} /></a>
+            <p>tentar novamente</p>
+          </div>
+        </div>
+      </>
+    )
+  } else if (error){
     return (
       <>
         <div className="createbook__posting">

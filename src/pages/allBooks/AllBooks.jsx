@@ -20,7 +20,7 @@ export default function AllBooks() {
     </>
   }
 
-  if (isGeting || !data) {
+  if (isGeting) {
     return (
       <>
         <div className="allbooks__geting">

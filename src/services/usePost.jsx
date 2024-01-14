@@ -5,19 +5,20 @@ export default function usePost(url, body, posted) {
   const [data, setData] = useState('')
   const [isPosting, setIsPosting] = useState(false)
   const [error, setError] = useState('')
+  const [error409, setError409] = useState(false)
 
   useEffect(() => {
     if (posted){
       setIsPosting(true)
-      console.log('posted data', body)
       axios.post(url, body)
       .then(res => {
-        console.log('response', res)
         setData(res.data)
       })
       .catch(err => {
+        if (err.response.status === 409){
+          setError409(true)
+        }
         setError(err)
-        console.log('error', err)
       })
       .finally(() => {
         setIsPosting(false)
@@ -25,5 +26,5 @@ export default function usePost(url, body, posted) {
     }
   }, [posted])
   
-  return { data, isPosting, error }
+  return { data, isPosting, error, error409 }
 }
