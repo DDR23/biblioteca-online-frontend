@@ -32,10 +32,10 @@ const router = createBrowserRouter([
         path: '/book/create',
         element: <CreateBook />
       },
-      {
-        path: '/book/update/:id',
-        element: <UpdateBook />
-      },
+      // {
+      //   path: '/book/update/:id',
+      //   element: <UpdateBook />
+      // },
     ]
   }
 ])

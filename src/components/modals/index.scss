@@ -1,0 +1,95 @@
+@use '../../../styles/mixins/mixins' as *;
+@use '../../../styles/variables/variables' as *;
+
+.modal{
+  @include flex-position(
+    flex,
+    column,
+    auto,
+    center,
+    center,
+    center
+  );
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: $cor-shadow;
+
+  &__content{
+    position: relative;
+    @include flex-position(
+      flex,
+      column,
+      0,
+      space-between,
+      center,
+      center
+    );
+    width: 30rem;
+    max-width: 96vw;
+    height: 40vh;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: $cor-preto;
+  }
+  
+  &__content--close{
+    position: absolute;
+    display: flex;
+    right: 1rem;
+
+    svg{
+      cursor: pointer;
+      margin: .2rem;
+    }
+  }
+
+  &__content--error{
+    margin: auto;
+    padding-top: 1rem;
+
+    p{
+      font-size: $font-p-default;
+    }
+  }
+
+  &__content--deleting{
+    margin: auto;
+
+    p{
+      font-size: $font-p-default;
+    }
+  }
+
+  &__content--deleted{
+    margin: auto;
+
+    p{
+      font-size: $font-p-default;
+    }
+
+    svg{
+      width: 8rem;
+      height: 8rem;
+      color: $cor-verde;
+    }
+  }
+
+  &__content--confirm{
+    margin: auto;
+
+    button{
+      margin: 1rem .5rem 0;
+    }
+  }
+}
+
+@include viewport(xs){
+  .modal__content{
+    p{
+      font-size: $font-p-xs;
+    }
+  }
+}
