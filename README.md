@@ -8,7 +8,7 @@ Nesse README.dm é possivel encontrar informações sobre:
 - Screenshots
 
 #### URL da API: https://desafio05escoladnc.vercel.app/
-#### URL da Aplicação Frontend: 
+#### URL da Aplicação Frontend: https://desafio05escoladnc.vercel.app/
 
 &nbsp;
 
@@ -59,7 +59,7 @@ comandos para iniciar esse projeto do zero
   cd nome-do-projeto
 ```
 ```bash
-  npm i axios dotenv react-router-dom react-icons
+  npm i axios dotenv react-router-dom react-icons react-hook-form @hookform/resolvers yup
 ```
 ```bash
   npm i -D sass
