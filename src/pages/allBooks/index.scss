@@ -16,7 +16,7 @@
   height: max-content;
 
   &__content{
-    width: 90vw;
+    width: 96vw;
     gap: .3rem;
     display: flex;
     justify-content: center;
@@ -56,7 +56,7 @@
 @include viewport(xs){
   .allbooks__geting{
     p{
-      font-size: 12px;
+      font-size: $font-p-xs;
     }
   }
 }

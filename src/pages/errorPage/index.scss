@@ -1,4 +1,5 @@
 @use '../../../styles/mixins/mixins' as *;
+@use '../../../styles/variables/variables' as *;
 
 .errorpage{
   @include flex-position(
@@ -11,4 +12,17 @@
   );
   width: 100vw;
   height: 90vh;
+
+  p{
+    font-size: $font-p-default;
+  }
+}
+
+
+@include viewport(xs){
+  .errorpage{
+    p{
+      font-size: $font-p-xs;
+    }
+  }
 }

@@ -5,7 +5,7 @@ import CardBook from '../../components/cardBook.jsx/CardBook'
 import ButtonCreate from '../../components/buttonCreate/ButtonCreate'
 
 export default function AllBooks() {
-  const { data, isGeting, error } = useGet("https://desafio05escoladnc.vercel.app/books")
+  const { data, isGeting, error } = useGet(`${import.meta.env.VITE_BASE_URL}/books`)
   const books = data.books
 
   if (error) {
@@ -20,7 +20,7 @@ export default function AllBooks() {
     </>
   }
 
-  if (isGeting || !data) {
+  if (isGeting) {
     return (
       <>
         <div className="allbooks__geting">
@@ -35,7 +35,7 @@ export default function AllBooks() {
       <div className="allbooks">
         <div className="allbooks__content">
           {books.map((book, index) => (
-            <CardBook key={index} title={book.title} publisher={book.publisher} />
+            <CardBook key={index} link={`/book/${book._id}`} book={book} />
           ))}
         </div>
       </div>

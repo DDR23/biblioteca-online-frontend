@@ -14,3 +14,13 @@
   margin-top: 1rem;
   @include buttondisabled;
 }
+
+@include viewport(xs){
+  .buttondefault{
+    font-size: $font-p-xs;
+  }
+
+  .buttondisabled{
+    font-size: $font-p-xs;
+  }
+}

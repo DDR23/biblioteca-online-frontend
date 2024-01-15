@@ -1,4 +1,5 @@
 @use '../../../styles/mixins/mixins' as *;
+@use '../../../styles/variables/variables' as *;
 
 .createbook{
   @include flex-position(
@@ -10,5 +11,109 @@
     center
   );
   width: 100vw;
-  height: 90vh;
+  height: max-content;
+
+  &__posting{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    padding: 4rem 0 1rem;
+    background-color: $cor-cinza;
+
+    svg{
+      margin-top: 1.5rem;
+      color: $cor-azul;
+      transition-duration: .5s;
+
+      &:hover{
+        transform: rotate(360deg);
+        transition-duration: .5s;
+      }
+    }
+
+    .success{
+      width: 10rem;
+      height: 10rem;
+      color: $cor-verde;
+      
+      &:hover{
+        transform: none;
+        
+      }
+    }
+
+    button{
+      margin: 2rem;
+      @include buttondefault;
+    }
+    button:hover{
+      @include buttondefaulthover;
+    }
+  }
+
+  &__content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 4rem 0 1rem;
+    background-color: $cor-cinza;
+
+    h2{
+      font-size: $font-h2-default;
+      font-family: 'Montserrat', sans-serif;
+      margin: 2rem 1rem 1rem;
+    }
+  }
+
+  &__content form{
+    display: flex;
+    flex-direction: column;
+    width: 20rem;
+    max-width: 90vw;
+
+
+    input{
+      padding: .2rem;
+    }
+
+    label{
+      font-size: $font-p-default;
+      margin-top: .2rem;
+      text-align: start;
+    }
+    
+    span{
+      font-size: $font-alert;
+      font-style: italic;
+      text-align: start;
+      color: $cor-vermelho;
+    }
+
+    button{
+      margin: 1rem auto;
+    }
+  }
+}
+
+@include viewport(xs){
+  .createbook__posting{
+    p{
+      font-size: $font-p-xs;
+    }
+  }
+
+  .createbook__content{
+    h1{
+      font-size: $font-h2-xs;
+    }
+
+    label{
+      font-size: $font-p-xs;
+    }
+  }
 }
