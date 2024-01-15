@@ -63,6 +63,8 @@
   border: 1px solid $cor-preto;
 
   &__details{
+    width: 100%;
+    
     h2{
       word-break: break-all;
       font-family: 'Montserrat', sans-serif;
