@@ -1,10 +1,19 @@
-import { Link, useParams } from 'react-router-dom'
 import './index.scss'
+import { Link, useParams } from 'react-router-dom'
 import { FiEdit, FiMenu, FiTrash } from "react-icons/fi"
 import { useState } from 'react'
+import ModalEdit from '../modals/ModalEdit'
+import ModalDelete from '../modals/modalDelete'
 
 export default function CardBook({ link, book }) {
+  const [openModalEdit, setOpenModalEdit] = useState(false)
+  const [openModalDelete, setOpenModalDelete] = useState(false)
   
+
+  // const openModalDelete = () => {
+  //   setIsEdit(false)
+  //   setOpenModal(!openModal)
+  // }
 
   // console.log(book.sumary)
   // console.log(bookId)
@@ -28,8 +37,12 @@ export default function CardBook({ link, book }) {
             }
           </div>
           <div className="cardbook__btnshow">
-            <FiEdit size={23} />
-            <FiTrash size={23} />
+            <FiEdit size={23} onClick={() => setOpenModalEdit(!openModalEdit)} />
+            <FiTrash size={23} onClick={() => setOpenModalDelete(!openModalDelete)}  />
+          </div>
+          <div className="cardbook__modals">
+            <ModalEdit isOpen={openModalEdit} isClose={setOpenModalEdit} />
+            <ModalDelete isOpen={openModalDelete} isClose={setOpenModalDelete} />
           </div>
         </div>
       ):(
