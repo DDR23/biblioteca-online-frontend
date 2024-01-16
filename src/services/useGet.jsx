@@ -7,7 +7,7 @@ export default function useGet(url) {
   const [error, setError] = useState('')
 
   useEffect(() => {
-    axios.get(url)
+    axios.get(url, { timeout: 5000 })
       .then(res => {
         setData(res.data)
       })
