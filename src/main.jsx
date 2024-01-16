@@ -32,12 +32,24 @@ const router = createBrowserRouter([
         path: '/book/create',
         element: <CreateBook />
       },
-      // {
-      //   path: '/book/update/:id',
-      //   element: <UpdateBook />
-      // },
+      {
+        path: '/book/update/:id',
+        element: <UpdateBook />
+      },
     ]
-  }
+  },
+  // {
+  //   path: '/',
+  //   element: <App />,
+  // },
+  // {
+  //   path: '/books',
+  //   element: <AllBooks />,
+  // },
+  // {
+  //   path: '/book/:id',
+  //   element: <OneBook />,
+  // },
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
