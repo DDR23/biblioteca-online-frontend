@@ -99,7 +99,7 @@ export default function CreateBook() {
             <input {...register('publisher')} type="text"></input>
             {errors.publisher && (<span>{errors.publisher.message}</span>)}
             <label>Descrição</label>
-            <input {...register('sumary')} type="text"></input>
+            <textarea {...register('sumary')} rows={5} type="text"></textarea>
             <button type='submit' className='buttondefault'>Cadastrar Livro</button>
           </form>
         </div>

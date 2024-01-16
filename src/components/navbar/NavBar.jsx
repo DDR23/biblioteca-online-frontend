@@ -11,12 +11,3 @@ export default function NavBar() {
     </>
   )
 }
-
-
-{/* 
-  <Link to='/'>Home</Link>
-  <Link to='/books'>Livros</Link>
-  <Link to={`/book/${id}`}>onebooks</Link>
-  <Link to='/book/create'>createbook</Link>
-  <Link to={`/book/update/${id}`}>updatebook</Link>
-*/}

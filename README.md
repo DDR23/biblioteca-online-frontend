@@ -5,7 +5,6 @@ Nesse README.dm é possivel encontrar informações sobre:
 - Etapas de desenvolvimento do desafio
 - Instalações
 - Funcionalidades
-- Screenshots
 
 #### URL da API: https://api-desafio05escoladnc.vercel.app/
 #### URL da Aplicação Frontend: https://desafio05escoladnc.vercel.app/
@@ -92,7 +91,3 @@ VITE_BASE_URL=https://api-desafio05escoladnc.vercel.app
 - cria um livro
 - edita um livro cadastrado
 - apaga um livro cadastrado
-
-&nbsp;
-
-## Screenshots
