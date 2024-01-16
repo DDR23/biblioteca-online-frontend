@@ -1,22 +1,22 @@
 import './index.scss'
 import { useForm } from 'react-hook-form'
-import { bookSchema } from '../../schemas/bookSchema'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { useEffect, useState } from 'react'
 import { IoIosCheckmarkCircle, IoMdRefresh } from 'react-icons/io'
 import ButtonDefault from '../../components/buttonDefault/ButtonDefault'
 import usePost from '../../services/usePost'
+import { bookCreateSchema } from '../../schemas/bookCreateSchema'
 
 export default function CreateBook() {
   const { register, handleSubmit, reset, formState: { errors } } = useForm({
     mode: 'onBlur',
-    resolver: yupResolver(bookSchema)
+    resolver: yupResolver(bookCreateSchema)
   })
 
   const [posted, setPosted] = useState(false)
   const [book, setBook] = useState('')
 
-  const { data, isPosting, error, error409 } = usePost(`${import.meta.env.VITE_BASE_URL}/books/create`, book, posted)
+  const { isPosted, isPosting, error, error409 } = usePost(`${import.meta.env.VITE_BASE_URL}/books/create`, book, posted)
 
   const createOneBook = (book) => {
     setPosted(true)
@@ -24,10 +24,10 @@ export default function CreateBook() {
   }
 
   useEffect(() => {
-    if (data || error) {
+    if (isPosted || error) {
       setPosted(false)
     }
-  }, [data, error])
+  }, [isPosted, error])
 
   if (error409) {
     return (
@@ -65,7 +65,7 @@ export default function CreateBook() {
     )
   }
 
-  if (data) {
+  if (isPosted) {
     return (
       <>
         <div className="createbook__posting">

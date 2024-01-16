@@ -9,14 +9,6 @@ export default function CardBook({ link, book }) {
   const [openModalEdit, setOpenModalEdit] = useState(false)
   const [openModalDelete, setOpenModalDelete] = useState(false)
   
-
-  // const openModalDelete = () => {
-  //   setIsEdit(false)
-  //   setOpenModal(!openModal)
-  // }
-
-  // console.log(book.sumary)
-  // console.log(bookId)
   return (
     <>
       {!link ? (
@@ -41,7 +33,7 @@ export default function CardBook({ link, book }) {
             <FiTrash size={23} onClick={() => setOpenModalDelete(!openModalDelete)}  />
           </div>
           <div className="cardbook__modals">
-            <ModalEdit isOpen={openModalEdit} isClose={setOpenModalEdit} />
+            <ModalEdit isOpen={openModalEdit} isClose={setOpenModalEdit} bookdata={book} />
             <ModalDelete isOpen={openModalDelete} isClose={setOpenModalDelete} />
           </div>
         </div>

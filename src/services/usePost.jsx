@@ -1,8 +1,8 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
 
-export default function usePost(url, body, posted) {
-  const [data, setData] = useState('')
+export default function usePost(url, book, posted) {
+  const [isPosted, setIsPosted] = useState(false)
   const [isPosting, setIsPosting] = useState(false)
   const [error, setError] = useState('')
   const [error409, setError409] = useState(false)
@@ -10,9 +10,9 @@ export default function usePost(url, body, posted) {
   useEffect(() => {
     if (posted){
       setIsPosting(true)
-      axios.post(url, body)
+      axios.post(url, book)
       .then(res => {
-        setData(res.data)
+        setIsPosted(true)
       })
       .catch(err => {
         if (err.response.status === 409){
@@ -26,5 +26,5 @@ export default function usePost(url, body, posted) {
     }
   }, [posted])
   
-  return { data, isPosting, error, error409 }
+  return { isPosted, isPosting, error, error409 }
 }

@@ -8,7 +8,6 @@ import Home from './pages/home/Home.jsx'
 import AllBooks from './pages/allBooks/AllBooks.jsx'
 import OneBook from './pages/oneBook/OneBook.jsx'
 import CreateBook from './pages/createBook/CreateBook.jsx'
-import UpdateBook from './pages/updateBook/UpdateBook.jsx'
 
 const router = createBrowserRouter([
   {
@@ -31,25 +30,9 @@ const router = createBrowserRouter([
       {
         path: '/book/create',
         element: <CreateBook />
-      },
-      {
-        path: '/book/update/:id',
-        element: <UpdateBook />
-      },
+      }
     ]
-  },
-  // {
-  //   path: '/',
-  //   element: <App />,
-  // },
-  // {
-  //   path: '/books',
-  //   element: <AllBooks />,
-  // },
-  // {
-  //   path: '/book/:id',
-  //   element: <OneBook />,
-  // },
+  }
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(

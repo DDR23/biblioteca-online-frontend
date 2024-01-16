@@ -29,7 +29,7 @@
     );
     width: 30rem;
     max-width: 96vw;
-    height: 40vh;
+    min-height: 40vh;
     padding: 1rem;
     border-radius: 10px;
     background-color: $cor-preto;
@@ -82,6 +82,36 @@
 
     button{
       margin: 1rem .5rem 0;
+    }
+  }
+
+  &__content form{
+    display: flex;
+    flex-direction: column;
+    width: 20rem;
+    max-width: 90vw;
+    margin-top: 3rem;
+
+
+    input{
+      padding: .2rem;
+    }
+
+    label{
+      font-size: $font-p-default;
+      margin-top: .2rem;
+      text-align: start;
+    }
+    
+    span{
+      font-size: $font-alert;
+      font-style: italic;
+      text-align: start;
+      color: $cor-vermelho;
+    }
+
+    button{
+      margin: 1rem auto;
     }
   }
 }

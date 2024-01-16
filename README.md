@@ -7,7 +7,7 @@ Nesse README.dm é possivel encontrar informações sobre:
 - Funcionalidades
 - Screenshots
 
-#### URL da API: https://desafio05escoladnc.vercel.app/
+#### URL da API: https://api-desafio05escoladnc.vercel.app/
 #### URL da Aplicação Frontend: https://desafio05escoladnc.vercel.app/
 
 &nbsp;
@@ -76,16 +76,12 @@ comandos para clonar esse projeto
 ```bash
   npm i
 ```
-```bash
-  npm i -D sass
-```
-&nbsp;
 
 &nbsp;
 Para rodar esse projeto, você vai precisar criar um arquivo .env e adicionar as seguintes variáveis de ambiente no seu .env
 
 ```
-VITE_BASE_URL=
+VITE_BASE_URL=https://api-desafio05escoladnc.vercel.app
 ```
 
 &nbsp;

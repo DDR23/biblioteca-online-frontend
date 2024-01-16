@@ -9,6 +9,7 @@ export default function OneBook() {
   const { data, isGeting, error } = useGet(`${import.meta.env.VITE_BASE_URL}/books/${bookId.id}`)
   const book = data
 
+
   if (error) {
     return(
       <>
