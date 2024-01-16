@@ -9,15 +9,17 @@ export default function AllBooks() {
   const books = data.books
 
   if (error) {
-    <>
-      <div className="allbooks__geting">
-        <p>Houve um erro durante a busca</p>
-        <div>
-          <a href="/books"><IoMdRefresh size={30} /></a>
-          <p>tentar novamente</p>
+    return(
+      <>
+        <div className="allbooks__geting">
+          <p>Houve um erro durante a busca</p>
+          <div>
+            <a href="/books"><IoMdRefresh size={30} /></a>
+            <p>tentar novamente</p>
+          </div>
         </div>
-      </div>
-    </>
+      </>
+    )
   }
 
   if (isGeting) {
