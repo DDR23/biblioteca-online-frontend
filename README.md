@@ -1,13 +1,13 @@
 ## IMPORTANTE
-Esse repositório foi criado e desenvolvido para o Frontend do desafio 05 da escola DNC.
+Esse repositório é o frontend do desafio 05. Desafio que consiste em um sistema simples de registro, edição e consulta de livros
 
 Nesse README.dm é possivel encontrar informações sobre:
 - Etapas de desenvolvimento do desafio
 - Instalações
 - Funcionalidades
 
-#### URL da API: https://api-desafio05escoladnc.vercel.app/
-#### URL da Aplicação Frontend: https://desafio05escoladnc.vercel.app/
+#### URL da API:
+#### URL da Aplicação Frontend:
 
 &nbsp;
 
